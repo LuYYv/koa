@@ -1,0 +1,9 @@
+{
+    "SERVER_MODE": "DEV",
+    "APP_CONFIG": {
+        "LISTEN_PORT": 4004
+    },
+    "MYSQL_CONFIG": {
+
+    }
+}
