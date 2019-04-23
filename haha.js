@@ -15,17 +15,25 @@ function outter() {
 }
 
 
-@outter()
+
+function iii(target, name, descriptor) {
+    return function(a,b,c) {
+        console.log(a);
+        console.log(b);
+        console.log(c);
+    }
+}
+
+// @iii()
 class Haha {
     constructor(props) {
         this.props = props;
     }
 
+   @iii()
     say() {
         console.log('haha');
     }    
-
-
 }
 
 new Haha().say()

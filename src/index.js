@@ -19,9 +19,9 @@ class MainServer {
         const { LISTEN_PORT } = app_config;
         this.server = new Koa();
         new MiddleRegister({ target: this.server }).middleRegister();
-        this.server.use(async (ctx) => {
-            ctx.body = 'hahahah'
-        })
+        // this.server.use(async (ctx) => {
+        //     ctx.body = 'hahahah'
+        // })
 
         this.server.listen(LISTEN_PORT, (err) => {
             if (err) { console.log(err) }

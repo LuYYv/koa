@@ -1,6 +1,12 @@
 import fs from 'fs';
 import path from 'path';
 import koaCompose from 'koa-compose';
+import { requestLog, responseLog } from "./middlewares/log";
+import wrapResult from "./middlewares/wrapResult";
+import catchError from './middlewares/catchError';
+
+const bodyparser = require('koa-bodyparser');
+
 
 class MiddleRegister {
     constructor(props) {
@@ -18,10 +24,17 @@ class MiddleRegister {
         return koaCompose(res);
     }
 
+
     //排列中间件
     middleRegister() {
         this.target
+            .use(bodyparser())
+            .use(requestLog)
+            .use(catchError)
             .use(this.createRoutesCompose())
+            .use(wrapResult)
+            .use(responseLog)
+            
     }
 
 }

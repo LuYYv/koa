@@ -16,5 +16,9 @@
     "koa": "^2.7.0",
     "koa-compose": "^4.1.0",
     "koa-router": "^7.4.0"
+  },
+  "devDependencies": {
+    "koa-body": "^4.1.0",
+    "koa-bodyparser": "^4.2.1"
   }
 }
