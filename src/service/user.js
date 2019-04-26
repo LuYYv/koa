@@ -6,8 +6,7 @@ class userServer {
         this.props = props;
     }
 
-    userLogin(ctx) {
-        throw 4002;
+    async userLogin(ctx) {
         let userinfo = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../../static/userinfo.json')).toString());
         const { username, password } = ctx.request.body;
         let res = userinfo.users.find(i =>
@@ -19,6 +18,11 @@ class userServer {
             return '11111'
         }
 
+    }
+
+    async userinfo(ctx) {
+        let haha = await this.props.Query(`select username from hhhh where username = ?`, ['haha']);
+        return haha;
     }
 }
 

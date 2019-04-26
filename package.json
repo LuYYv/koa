@@ -15,7 +15,8 @@
     "babel-preset-es2015": "^6.24.1",
     "koa": "^2.7.0",
     "koa-compose": "^4.1.0",
-    "koa-router": "^7.4.0"
+    "koa-router": "^7.4.0",
+    "mysql": "^2.17.1"
   },
   "devDependencies": {
     "koa-body": "^4.1.0",

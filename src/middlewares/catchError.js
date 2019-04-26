@@ -3,7 +3,8 @@ import fs from 'fs';
 
 const errorMap = {
     4001: "测试错误",
-    4002: "数据库连接错误"
+    4002: "数据库连接错误",
+    4003: "数据库查询异常"
 }
 
 const catchError = async (ctx, next) => {

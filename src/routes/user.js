@@ -6,7 +6,7 @@ class UserRoute {
 
     @Request({ url: '/userinfo', method: 'get' })
     async userinfo(ctx, next) {
-        let res = await userServer.userinfo(ctx);
+        let res = await userService.userinfo(ctx);
         ctx.body = res;
         await next();
     }
